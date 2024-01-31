@@ -1,0 +1,75 @@
+body {
+    background: url('register-image.jpg') center/cover no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-container {
+    background-color: rgba(249, 247, 247, 0.823);
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Add rounded corners */
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+h1 {
+    font-size: 28px;
+    font-family: 'Helvetica', sans-serif;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold; /* Apply bold font weight to form labels */
+    margin-top: 10px;
+}
+
+/* Add these styles for the "Register" button */
+button[type="submit"] {
+    background-color: #3498db; /* A contrasting color */
+    color: #fff; /* White text color */
+    font-size: 15px; /* Larger font size */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    cursor: pointer;
+    transition: background-color 0.2s; /* Add a subtle transition effect */
+}
+
+/* Change button color on hover for better interactivity */
+button[type="submit"]:hover {
+    background-color: #2386c4;
+}
+
+/* Additional styles to make the button more visually appealing */
+button[type="submit"]:active {
+    background-color: #1b6dab; /* Darker color when the button is clicked */
+}
+
+button[type="submit"]:focus {
+    outline: none; /* Remove the default focus outline */
+}
+
+/* Add any other specific button styling as needed */
+
+
+/* Other CSS styles for form elements and validation */
+
+/* Add your specific styling here */

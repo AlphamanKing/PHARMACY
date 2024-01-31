@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Login - Halisi Pharmacy Management System</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            background-image: url('login-image.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #8a076b;
+            
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            background-color: rgba(0,0,0, 0.5);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+
+        label {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: #ccc;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer a {
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Halisi Pharmacy Management System</h1>
+        <form action="login.php" method="post">
+            <input type="text" name="username" placeholder="Username/Email" required>
+            <div>
+                <input type="password" name="password" placeholder="Password" required>
+                <i class="fa fa-eye-slash" aria-hidden="true" onclick="togglePassword()"></i>
+            </div>
+            <label>
+                <input type="checkbox" name="remember"> Remember Me
+            </label>
+            <a style="color: #e88260;"href="#">Forgot Password?</a>
+            <button type="submit">Login</button>
+            <p style="color: #ef94f5;">Don't have an account? <a href="register.html">Register here</a></p>
+            <?php if (isset($error)) : ?>
+                <p class="error"><?php echo $error; ?></p>
+            <?php endif; ?>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2023 Halisi Pharmacy Management System</p>
+        <p>
+            <a href="terms_of_service.html">Terms of Service</a>
+            <a href="privacy_policy.html">Privacy Policy</a>
+            <a href="contact_page.html">Contact Us</a>
+        </p>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

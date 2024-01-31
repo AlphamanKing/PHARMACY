@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #e5f174;
+            text-align: center;
+            padding: 1em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 0.5em;
+        }
+
+    nav {
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+       }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        padding: 1em;
+        margin: 0 0.5em;
+        font-size: 1.2em;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+        }
+
+    nav a:hover {
+        background-color: #fff;
+        color: #555;
+       }
+
+
+        /* Add this to your existing styles */
+
+        section {
+            /*margin: 2em; */
+             background: url('image-1.jpg') center/cover no-repeat;
+              padding: 4em; /* Adjust padding as needed */
+             text-align: center;
+             color: #1d1e1f; /* Adjust text color for better visibility on the image */
+        }
+
+
+        .dashboard-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .dashboard-card {
+            width: 30%;
+            background-color: #e8fcdc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 1em;
+            padding: 1.5em;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Halisi Pharmacy Management System</h1>
+        <p style="color: #9ff179; size: 10;"> Welcome Admin</p>
+    </header>
+
+    <nav>
+        <!-- Add navigation links for various admin functions -->
+        <a href="#">Prescrriptions</a>
+        <a href="#">Inventory</a>
+        <a href="#">Sales</a>
+        <a href="#">Customers</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+    </nav>
+
+    <section>
+        <div class="dashboard-container">
+
+            <!-- Dashboard Cards for Admin Features -->
+            <div class="dashboard-card">
+                <h2>Total Sales</h2>
+                <!-- Add dynamic content to display total sales -->
+                <p>$5000</p>
+                <p>10% increase compared to Yesterday</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Inventory Status</h2>
+                <!-- Add dynamic content to display inventory status -->
+                <p>Low Stock</p>
+                <p>Urgently needs Restocking</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Latest Reports</h2>
+                <!-- Add dynamic content to display new orders -->
+                <p>3</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>App usage Today</h2>
+                <!-- Add dynamic content to display new orders -->
+                <p>Moderate</p>
+            </div>
+            <div class="dashboard-card">
+                <h2>New Customers</h2>
+                <!-- Add dynamic content to display new orders -->
+                <p>10</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>System Downtime Today</h2>
+                <!-- Add dynamic content to display new orders -->
+                <p>99 seconds at 03:22 HRS</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Halisi Pharmacy Management System</p>
+    </footer>
+
+</body>
+
+</html>

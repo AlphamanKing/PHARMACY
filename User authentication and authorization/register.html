@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Halisi Pharmacy Management System</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="registration-container">
+        <img src="logo.png" alt="Halisi Pharmacy Logo">
+        <h1>Register</h1>
+        <form id="registration-form">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div class="password-strength" id="password-strength" style="color: rgb(88, 12, 158);">
+                Password Strength: <span id="strength-label">Weak</span></div>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <label for="contact-number">Contact Number:</label>
+            <input type="tel" id="contact-number" name="contact-number" required>
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="admin">Admin</option>
+                <option value="customer">Customer</option>
+            </select>
+            <label for="terms-and-conditions">
+                <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
+                I accept the <a href="terms_of_service.html" target="_blank" style="color: brown;">Terms of Service</a> and <a href="privacy_policy.html" target="_blank" style="color: brown;">Privacy Policy</a>.
+            </label>
+            <button type="submit">Register</button>
+        </form>
+        <div class="error-message" id="error-message"></div>
+        <p>Already have an account? <a href="login.html">Log in here</a></p>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

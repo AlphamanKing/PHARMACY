@@ -1,0 +1,187 @@
+<html>
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .parallax {
+            height: 500px;
+            background-image: url("contact-image.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 10px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            background: #f0f0f0; /* add a background color */
+            padding: 20px; /* add some padding */
+            border: 1px solid #ccc; /* add a border */
+            border-radius: 10px; /* add a border radius */
+        }
+
+        .form-label {
+            font-size: 16px;
+            font-weight: normal;
+            margin: 5px 0;
+        }
+
+        .form-input {
+            width: 100%;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .form-textarea {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .form-button {
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            background: #4ca1af;
+        }
+
+        .footer {
+            width: 100%;
+            height: 50px;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+
+        .social-link {
+            display: inline-block;
+        }
+
+.button-back {
+    width: 30%; /* adjust the width */
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(84, 22, 22);
+    font-size: 16px;
+    cursor: pointer;
+    background: hsla(68, 69%, 61%, 0.838); /* add a background color */
+}
+
+    </style>
+</head>
+<body>
+    <div class="parallax"></div>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1 class="title">Contact Us</h1>
+        <form class="form" id="contact-form" onsubmit="return send()">
+            <div>
+                <label class="form-label" for="name">Name</label>
+                <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label class="form-label" for="email">Email</label>
+                <input class="form-input" type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label class="form-label" for="subject">Subject</label>
+                <input class="form-input" type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+                <label class="form-label" for="phone">Phone</label>
+                <input class="form-input" type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-textarea" id="message" name="message" required></textarea>
+            </div>
+            <div>
+                <button class="form-button" type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+    <div >
+        <button class="button-back" onclick="back()">Back</button> <!-- add a back button -->
+    </div>
+    
+    <div class="footer">
+        <a class="social-link" href="https://www.facebook.com/pharmacywebapp" target="_blank"><img src="facebook.png" alt="Facebook" class="social-icon"></a>
+        <a class="social-link" href="https://www.twitter.com/pharmacywebapp" target="_blank"><img src="twitter.jpg" alt="Twitter" class="social-icon"></a>
+        <a class="social-link" href="https://www.instagram.com/pharmacywebapp" target="_blank"><img src="instagram.jpg" alt="Instagram" class="social-icon"></a>
+    </div>
+    <script>
+        function send() {
+            // validate the form input
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("message").value;
+            if (name == "" || email == "" || subject == "" || phone == "" || message == "") {
+                alert("Please fill in all the fields.");
+                return false;
+            }
+            // send the message to the web app
+            // this is a dummy function, you need to implement the actual logic
+            alert("Your message has been sent. Thank you for contacting us.");
+            // reset the form
+            document.getElementById("contact-form").reset();
+            return false;
+        }
+
+        function back() {
+    // navigate back to the login page
+    window.location.href = "login.html";
+}
+
+    </script>
+</body>
+</html>
