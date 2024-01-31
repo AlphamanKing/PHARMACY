@@ -21,9 +21,9 @@ if (isset($_SESSION['successMessage'])) {
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/PHARMACY/sales_management/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/PHARMACY/customers_management/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/PHARMACY/bootstrap-5.2.3-dist/css/bootstrap.min.css">
-    <title>Sales Management</title>
+    <title>Customers Management</title>
 </head>
 
 <body>
@@ -38,19 +38,17 @@ if (isset($_SESSION['successMessage'])) {
         ";
         }
         ?>
-        <h2>Sales information</h2>
-        <a class="btn btn-primary" href="/PHARMACY/sales_management/create.php" role="button">New Record</a>
+        <h2>Customers information</h2>
+        <a class="btn btn-primary" href="/PHARMACY/customers_management/create.php" role="button">New Record</a>
         <br>
         <table class="table">
             <thead>
                 <tr>
-                    <th>SALE_ID</th>
-                    <th>PRODUCT_ID</th>
-                    <th>PHARMACY_ID</th>
                     <th>CUSTOMER_ID</th>
-                    <th>SALE_DATE</th>
-                    <th>QUANTITY</th>
-                    <th>TOTAL_AMOUNT</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>PHONE</th>
+                    <th>ADDRESS</th>
                     <th>ACTION</th>
                 </tr>
             </thead>
@@ -70,7 +68,7 @@ if (isset($_SESSION['successMessage'])) {
                 }
 
                 //read all rows from database table
-                $sql = "SELECT * FROM sales";
+                $sql = "SELECT * FROM customers";
                 $result = $conn->query($sql);
 
                 if (! $result) {
@@ -81,17 +79,15 @@ if (isset($_SESSION['successMessage'])) {
                 while($row = $result->fetch_assoc()) {
                     echo "
                     <tr>
-                    <td>$row[sale_id]</td>
-                    <td>$row[product_id]</td>
-                    <td>$row[pharmacy_id]</td>
                     <td>$row[customer_id]</td>
-                    <td>$row[sale_date]</td>
-                    <td>$row[quantity]</td>
-                    <td>$row[total_amount]</td>
+                    <td>$row[name]</td>
+                    <td>$row[email]</td>
+                    <td>$row[phone]</td>
+                    <td>$row[address]</td>
                     <td>
-                    <a class='btn btn-primary btn-sm' href='/PHARMACY/sales_management/edit.php?sale_id=$row[sale_id]'>Edit</a>
+                    <a class='btn btn-primary btn-sm' href='/PHARMACY/customers_management/edit.php?customer_id=$row[customer_id]'>Edit</a>
 
-                    <a class='btn btn-danger btn-sm' href='/PHARMACY/sales_management/delete.php?sale_id=$row[sale_id]'>Delete</a>
+                    <a class='btn btn-danger btn-sm' href='/PHARMACY/customers_management/delete.php?customer_id=$row[customer_id]'>Delete</a>
                     </td>
                 </tr>
                     ";
