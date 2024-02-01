@@ -21,9 +21,9 @@ if (isset($_SESSION['successMessage'])) {
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/PHARMACY/sales_management/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/PHARMACY/inventory_management/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/PHARMACY/bootstrap-5.2.3-dist/css/bootstrap.min.css">
-    <title>Sales Management</title>
+    <title>Inventory Management</title>
 </head>
 
 <body>
@@ -38,19 +38,20 @@ if (isset($_SESSION['successMessage'])) {
         ";
         }
         ?>
-        <h2>Sales Management</h2>
-        <a class="btn btn-primary" href="/PHARMACY/sales_management/create.php" role="button">New Record</a>
+        <h2>Inventory Management</h2>
+        <a class="btn btn-primary" href="/PHARMACY/inventory_management/create.php" role="button">New Record</a>
         <br>
         <table class="table">
             <thead>
                 <tr>
-                    <th>SALE_ID</th>
                     <th>PRODUCT_ID</th>
-                    <th>PHARMACY_ID</th>
-                    <th>CUSTOMER_ID</th>
-                    <th>SALE_DATE</th>
+                    <th>PRODUCT_NAME</th>
+                    <th>MANUFACTURER</th>
+                    <th>DESCRIPTION</th>
+                    <th>CATEGORY</th>
+                    <th>PRICE</th>
                     <th>QUANTITY</th>
-                    <th>TOTAL_AMOUNT</th>
+                    <th>EXPIRY_DATE</th>
                     <th>ACTION</th>
                 </tr>
             </thead>
@@ -70,7 +71,7 @@ if (isset($_SESSION['successMessage'])) {
                 }
 
                 //read all rows from database table
-                $sql = "SELECT * FROM sales";
+                $sql = "SELECT * FROM inventory";
                 $result = $conn->query($sql);
 
                 if (! $result) {
@@ -81,17 +82,18 @@ if (isset($_SESSION['successMessage'])) {
                 while($row = $result->fetch_assoc()) {
                     echo "
                     <tr>
-                    <td>$row[sale_id]</td>
                     <td>$row[product_id]</td>
-                    <td>$row[pharmacy_id]</td>
-                    <td>$row[customer_id]</td>
-                    <td>$row[sale_date]</td>
+                    <td>$row[product_name]</td>
+                    <td>$row[manufacturer]</td>
+                    <td>$row[description]</td>
+                    <td>$row[category]</td>
+                    <td>$row[price]</td>
                     <td>$row[quantity]</td>
-                    <td>$row[total_amount]</td>
+                    <td>$row[expiry_date]</td>
                     <td>
-                    <a class='btn btn-primary btn-sm' href='/PHARMACY/sales_management/edit.php?sale_id=$row[sale_id]'>Edit</a>
+                    <a class='btn btn-primary btn-sm' href='/PHARMACY/inventory_management/edit.php?product_id=$row[product_id]'>Edit</a>
 
-                    <a class='btn btn-danger btn-sm' href='/PHARMACY/sales_management/delete.php?sale_id=$row[sale_id]'>Delete</a>
+                    <a class='btn btn-danger btn-sm' href='/PHARMACY/inventory_management/delete.php?product_id=$row[product_id]'>Delete</a>
                     </td>
                 </tr>
                     ";
