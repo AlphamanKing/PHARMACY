@@ -19,16 +19,59 @@
                     Products
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="customers.php">
-                    <span data-feather="users"></span>
-                    Customers
-                </a>
-            </li>
             <li class="nav-item ">
                 <a class="nav-link" href="admin.php">
                     <span data-feather="user"></span>
                     Admin
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../sales_management/sales.php">
+                    <span data-feather="dollar-sign"></span>
+                    Sales Management
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="customers.php">
+                    <span data-feather="users"></span>
+                    Customers Management
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="../../users_management/users.php">
+                    <span data-feather="users"></span>
+                    Users Management
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../doctors_management/doctors.php">
+                    <span data-feather="thermometer"></span>
+                    Doctors Management
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../inventory_management/inventory.php">
+                    <span data-feather="book-open"></span>
+                    Inventory Management
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../reports_management/reports.php">
+                    <span data-feather="mail"></span>
+                    Reports Management
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../pharmacy_management/pharmacy.php">
+                    <span data-feather="anchor"></span>
+                    Pharmacy Management
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../prescriptions_management/prescriptions.php">
+                    <span data-feather="grid"></span>
+                    Prescriptions Managment
                 </a>
             </li>
             <li class="nav-item ">

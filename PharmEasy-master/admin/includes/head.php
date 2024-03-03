@@ -16,7 +16,7 @@ if (isset($_SESSION['admin_id'])) {
 
 <head>
     <title>
-        PharmEasy
+        Halisi Online Pharmacy
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
