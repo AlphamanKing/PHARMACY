@@ -120,21 +120,30 @@
         <form action="login.php" method="post">
             <input type="text" name="username" placeholder="Username/Email" required>
             <div>
-                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
                 <i class="fa fa-eye-slash" aria-hidden="true" onclick="togglePassword()"></i>
             </div>
             <label>
                 <input type="checkbox" name="remember"> Remember Me
             </label>
-            <a style="color: #e88260;"href="#">Forgot Password?</a>
-            <button type="submit">Login</button>
+            <a style="color: #e88260;" href="#">Forgot Password?</a>
+            <button type="submit" name="submit">Login</button>
             <p style="color: #ef94f5;">Don't have an account? <a href="register.html">Register here</a></p>
-            <?php if (isset($error)) : ?>
-                <p class="error"><?php echo $error; ?></p>
-            <?php endif; ?>
+            <!-- Remove PHP block -->
+            <p class="error" id="error" style="color: red; display: none;"></p> <!-- Add an error paragraph -->
         </form>
     </div>
-
+    <script>
+        function togglePassword() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+    
     <footer>
         <p>© 2023 Halisi Pharmacy Management System</p>
         <p>

@@ -1,5 +1,5 @@
 <header class="navbar navbar-dark  sticky-top bg-dark flex-md-nowrap  shadow ">
-    <a href="index.php"> <img src="../images/PharmEasy.png" style="height: 40px; display: inline; padding-bottom: 5px; width:150px;"></a>
+<h4 class="nav-link" style="color:pink; font-size: bold;" href="../../index.php">Halisi Online Pharmacy</h4>
 
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">

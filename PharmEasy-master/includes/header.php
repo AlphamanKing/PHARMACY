@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0d8592;">
         <div class="container-fluid">
-            <a href="index.php"> <img src="images/PharmEasy.png" id="image"></a>
+         <a  class="nav-link" style="color:pink; font-size: bold;"><h4>Halisi Online Pharmacy</h4> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" style="color: white; " aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
