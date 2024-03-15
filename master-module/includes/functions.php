@@ -1,11 +1,11 @@
 <?php
 $connection = mysqli_connect("localhost", "root", "", "PharmEasy");
-// $connection = mysqli_connect("localhost", "id18666014_md_taha_ahmed", "bGCL0+&4qT64IM_{", "id18666014_pharmeasy");
+
     function post_redirect($url)
 {
     ob_start();
     header('Location: ' . $url);
-    // header('Location: https://md-taha-ahmed.000webhostapp.com/pharmeasy/' . $url);
+    
     ob_end_flush();
     die();
 }
@@ -14,9 +14,7 @@ function get_redirect($url)
     echo " <script> 
     window.location.href = '" . $url . "'; 
     </script>";
-    // echo "<script>
-    // window.location.href = 'https://md-taha-ahmed.000webhostapp.com/pharmeasy/" . $url . "';
-    // </script>";
+    
 }
 function query($query)
 {

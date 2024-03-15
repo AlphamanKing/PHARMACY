@@ -22,9 +22,9 @@
                 <h4>Social Media</h4>
                 <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.facebook.com/pharmeasy/" style="color: white; margin-right :20px;"> <i class="fab fa-facebook fa-3x">&nbsp;</i></a>
-                <a href="https://www.instagram.com/pharmeasyapp/" style="color: white; margin-right :20px;"><i class="fab fa-instagram fa-3x">&nbsp;</i></a>
-                <a href="https://twitter.com/pharmeasyapp/" style="color: white; margin-right :20px;"><i class="fab fa-twitter fa-3x"></i></a>
+                <a href="https://www.facebook.com/alphamanking/" style="color: white; margin-right :20px;"> <i class="fab fa-facebook fa-3x">&nbsp;</i></a>
+                <a href="https://www.instagram.com/alphaman_king/" style="color: white; margin-right :20px;"><i class="fab fa-instagram fa-3x">&nbsp;</i></a>
+                <a href="https://twitter.com/alphamanking/" style="color: white; margin-right :20px;"><i class="fab fa-twitter fa-3x"></i></a>
             </div>
         </div>
         <br><br>
@@ -33,7 +33,7 @@
                 <span class="glyphicon glyphicon-leaf"></span>
                 <h4>ASK QUESTION</h4>
                 <br>
-                <a href="https://pharmeasy.in/help" style="color: white; text-decoration: none;">
+                <a href="https://www.facebook.com/AlphamanKing/" style="color: white; text-decoration: none;">
                     <h5>FAQ'S</h5>
                 </a>
 
@@ -65,6 +65,6 @@
 </strong>
 <!-- Copyright -->
 <div class="footer-copyright text-center py-3 " style="background-color:#086a76;">© 2024 Copyright:
-    <a href="https://pharmeasy.in" target="_blank" style="color: white; text-decoration: none;">Halisi Online Pharmacy</a>
+    <a href="https://twitter.com/alphamanking/" target="_blank" style="color: white; text-decoration: none;">Halisi Online Pharmacy</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -1,3 +1,9 @@
+<?php
+session_start();
+// Store current URL in session variable
+$_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
+?>
+
 <html>
 <head>
     <style>
@@ -121,7 +127,7 @@
             color: #fff;
         }
     </style>
-    <img src="logo.png" alt="Logo" class="logo">
+    
     <title>
         Pharmacy Dashboard
     </title>
@@ -135,9 +141,9 @@
         <p class="title">Pharmacy Dashboard</p>
         <!-- Header navigation -->
         <ul class="nav">
-            <li><a href="home.php" class="nav-link">Home</a></li>
-            <li><a href="../../User_authentication_and_authorization/terms_of_service.html" class="nav-link">Terms of Service</a></li>
-            <li><a href="../../User_authentication_and_authorization/contact_page.html" class="nav-link">Contact</a></li>
+            <li><a href="/PHARMACY/index.php" class="nav-link">Home</a></li>
+            <li><a href="../../User_authentication_and_authorization/terms_of_service.php" class="nav-link">Terms of Service</a></li>
+            <li><a href="../../User_authentication_and_authorization/contact_page.php" class="nav-link">Contact</a></li>
         </ul>
     </div>
     <!-- Dashboard section -->

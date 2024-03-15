@@ -27,7 +27,7 @@
                 <?php
                 // Check if the $showBackButton variable is set and true
                 if (isset($showBackButton) && $showBackButton === true) {
-                    echo '<a class="btn btn-outline-light btn-sm" href="/PHARMACY/main_page.php"><i class="bi bi-house-door"></i> BACK TO MAIN PAGE</a>
+                    echo '<a class="btn btn-outline-light btn-sm" href="/PHARMACY/index.php"><i class="bi bi-house-door"></i> BACK TO MAIN PAGE</a>
                     ';
                 }
                 ?>

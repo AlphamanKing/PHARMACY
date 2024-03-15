@@ -75,7 +75,8 @@ include "includes/head.php"
               <ul class="list-group list-group-flush">
                 <form action="product.php" method="GET">
                   <div class="form-group">
-                    <input value="1" type="number" class="form-control" placeholder="" name="quantity" min="1" max="999">
+                    <input value="1" type="number" class="form-control" placeholder="" name="quantity" min="1" max="999"> <br>
+                    <input value="" class="form-control" placeholder="enter mpesa no" name="mpesa">
                   </div>
                   <br>
                   <button type="submit" value="buy" name="buy" class="btn btn-warning " style="margin: 5px;">&nbsp; Buy Now &nbsp;</button>

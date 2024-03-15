@@ -1,7 +1,6 @@
 <?php
-// Include the database config file
-require_once 'db_config.php';
 
+include 'db_config.php';
 // Define variables and initialize with empty values
 $fullName = $username = $email = $password = $confirmPassword = "";
 $fullNameErr = $userNameErr = $emailErr = $passwordErr = $confirmPasswordErr = "";
@@ -43,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $confirmPasswordErr = "Please confirm the password.";
     } else {
         $confirmPassword = trim($_POST["confirm-password"]);
-        if ($password != $confirmPassword) {
+        if (empty($passwordErr) && ($password != $confirmPassword)) {
             $confirmPasswordErr = "Password did not match.";
         }
     }
@@ -66,8 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
                 // Redirect to login page
-                header("Location: /PHARMACY/Dashboards/Pharmacist_dashboard/index.php");
-                exit();
+                header("location: login.php");
             } else {
                 echo "Something went wrong. Please try again later.";
             }
@@ -115,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span class="error"><?php echo $confirmPasswordErr; ?></span>
             <label for="terms-and-conditions">
                 <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
-                I accept the <a href="terms_of_service.php" target="_blank" style="color: brown;">Terms of Service</a> and <a href="privacy_policy.php" target="_blank" style="color: brown;">Privacy Policy</a>.
+                I accept the <a href="terms_of_service.html" target="_blank" style="color: brown;">Terms of Service</a> and <a href="privacy_policy.html" target="_blank" style="color: brown;">Privacy Policy</a>.
             </label>
             <button type="submit">Register</button>
         </form>
