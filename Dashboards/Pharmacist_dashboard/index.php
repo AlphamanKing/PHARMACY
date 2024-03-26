@@ -131,6 +131,7 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
     <title>
         Pharmacy Dashboard
     </title>
+    <link rel="icon" href="/PHARMACY/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- Header section -->

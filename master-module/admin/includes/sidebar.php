@@ -45,7 +45,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../../doctors_management/doctors.php">
+                <a class="nav-link" href="/PHARMACY/doctors_management/doctors.php">
                     <span data-feather="thermometer"></span>
                     Doctors Management
                 </a>

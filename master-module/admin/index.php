@@ -84,13 +84,13 @@ include "index.css";
       </div>
       <div class="row">
        <div class="card" style="width: 25rem;margin-bottom: 20px ; margin-top:20px; margin-right: 100px;">
-          <a href="../../doctors_management/doctors.php">
+          <a href="/PHARMACY/doctors_management/doctors.php">
             <img class="card-img-top" src="../images/doctors-management.svg" alt="Card image cap" style="width: 5rem;margin-top: 20px ;">
           </a>
           <div class="card-body">
             <h5 class="card-title">Doctors</h5>
             <p class="card-text">Manage the doctors.</p>
-            <a href="../../doctors_management/doctors.php" class="btn btn-primary">Go to doctors mgt page</a>
+            <a href="/PHARMACY/doctors_management/doctors.php" class="btn btn-primary">Go to doctors mgt page</a>
           </div>
         </div>
         <div class="card" style="width: 25rem; margin-bottom: 20px ;margin-top: 20px ; margin-right:100px">
