@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include "includes/head.php"
 ?>
 
@@ -50,6 +54,7 @@ include "includes/head.php"
                                     <?php
                                     }
                                     ?>
+
                                     </p>
                                     <small style="font-weight: bold;">ksh. <?php echo $data[$i][0]['item_price'] ?></small><br>
                                     <small class="text-muted" style="font-weight: bold;">Brand Name </small>
@@ -84,14 +89,14 @@ include "includes/head.php"
                             } else {
                                 echo "items";
                             } ?>) : ksh. <?php echo $total ?></h5>
-
+                            <?php $_SESSION['total_amount'] = $total; ?>
                 <br>
 
             </div>
             <div style="margin-left: 350px; padding-right: 100px;">
                 <a href="cart.php?delete_all=1" class="btn btn-outline-danger btn-lg"> Delete all Products !</a>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                <a href="final.php?order=done" class="btn btn-outline-success btn-lg"> &nbsp;Proceed to Buy &nbsp;</a>
+                <a href="/PHARMACY/master-module/mpesa-API/checkout.php" class="btn btn-outline-success btn-lg"> &nbsp;Proceed to Buy &nbsp;</a>
                 <br><br>
             </div>
         <?php
@@ -102,7 +107,7 @@ include "includes/head.php"
             <img style="width:46rem; margin-left: 330px;" src="images/nocart.png" alt="">
         <?php
         }
-        ?>
+    ?>
 
     </div>
     <!-- end of TOTAL -->
@@ -112,5 +117,5 @@ include "includes/head.php"
     ?>
 
 </body>
-
+ 
 </html>

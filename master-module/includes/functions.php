@@ -59,6 +59,7 @@ function login()
             post_redirect("login.php");
         } elseif ($password == $data[0]['user_password'] and  $userEmail == $data[0]['email']) {
             $_SESSION['user_id'] = $data[0]['user_id'];
+            $_SESSION['email'] = $userEmail;
             post_redirect("index.php");
         } else {
             $_SESSION['message'] = "loginErr";
@@ -250,6 +251,8 @@ function get_cart()
             $query = "SELECT item_id, item_image ,item_title  ,item_quantity ,item_price ,item_brand FROM item WHERE item_id='$item_id'";
             $data[$i] = query($query);
         }
+       // var_dump($data);  // Show the contents of $data
+       // die();
         return $data;
     }
 }
